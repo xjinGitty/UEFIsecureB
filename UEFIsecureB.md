@@ -1,4 +1,5 @@
-[UEFI wiki](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)
+[UEFI wiki](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)    
+[grub wiki](https://wiki.archlinux.org/index.php/GRUB)
 ## history:
 1. 1998: intel initiative boot
 2. 2005: uefi V1
