@@ -1,4 +1,4 @@
-[UEFI](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)
+[UEFI wiki](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)
 ## history:
 1. 1998: intel initiative boot
 2. 2005: uefi V1
@@ -54,6 +54,7 @@
 
 ## Secure boot
 [secureBootKeyChain](https://www.suse.com/communities/conversations/wp-content/uploads/2012/08/mok2.png)
+[details secureB of suse](https://www.suse.com/communities/conversations/uefi-secure-boot-details/)
 
 1. from uefi v2.2: just os loaders or drivers that has been signed via the acceptable digital signature could be loaded
 2. enable secure boot: system will drop to 'setup' mode, ask for the pk to be writen, after this, enter the 'user' mode. then only the driver or the os loader that has been signed with the pk could be loaded.
@@ -61,7 +62,7 @@
 4. and there is 'custom' mode, could let user add additional pk in
 
 5. Intel-based systems certified for Windows 8 must allow secure boot to enter custom mode or be disabled, but not on systems using the ARM architecture
-6. minimal bootloader: shim is used to be signed with win PK, and 
+6. minimal bootloader: shim is used to be signed with win PK, and then ...
 
 ## UEFI shell
 1. launching method: some firmware vendor make it available as efi app under the ESP, like /ESP/SHELLX64.efi
