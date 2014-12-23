@@ -15,11 +15,11 @@
 ## disk compatibility
 1. linux to support GPT could be enabled by turn on option: CONFIG_EFI_PARTITION
 2. BIOS via GPT:
-	1) grub2 and linux (GPT-aware): then the protective MBR could used as the original MBR
-	2) grub and linux: then BIOS-BOOP-PARTITION is needed to embed the seconde stage of the grub	
+	1. grub2 and linux (GPT-aware): then the protective MBR could used as the original MBR
+	2. grub and linux: then BIOS-BOOP-PARTITION is needed to embed the seconde stage of the grub	
 	BBP only valid when BIOS-GPT: 
-		a) GPT did not have that partition type
-		b) UEFI: no such embedding for the second stage: for grub2-efi is just and efi app file
+		- GPT did not have that partition type
+		- UEFI: no such embedding for the second stage: for grub2-efi is just and efi app file
 3. UEFI via GPT:
 	ESP will be create for the efi app file (512M will be ok)
 4. UEFI via MBR:
@@ -54,6 +54,7 @@
 
 ## Secure boot
 [secureBootKeyChain](https://www.suse.com/communities/conversations/wp-content/uploads/2012/08/mok2.png)
+
 1. from uefi v2.2: just os loaders or drivers that has been signed via the acceptable digital signature could be loaded
 2. enable secure boot: system will drop to 'setup' mode, ask for the pk to be writen, after this, enter the 'user' mode. then only the driver or the os loader that has been signed with the pk could be loaded.
 3. KEK can be add to DB to allow other certificates to be used.
