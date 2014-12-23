@@ -1,4 +1,4 @@
-[UEFI](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)
+[UEFI wiki](http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)
 ## history:
 1. 1998: intel initiative boot
 2. 2005: uefi V1
@@ -15,11 +15,11 @@
 ## disk compatibility
 1. linux to support GPT could be enabled by turn on option: CONFIG_EFI_PARTITION
 2. BIOS via GPT:
-	1) grub2 and linux (GPT-aware): then the protective MBR could used as the original MBR
-	2) grub and linux: then BIOS-BOOP-PARTITION is needed to embed the seconde stage of the grub	
+	1. grub2 and linux (GPT-aware): then the protective MBR could used as the original MBR
+	2. grub and linux: then BIOS-BOOP-PARTITION is needed to embed the seconde stage of the grub	
 	BBP only valid when BIOS-GPT: 
-		a) GPT did not have that partition type
-		b) UEFI: no such embedding for the second stage: for grub2-efi is just and efi app file
+		- GPT did not have that partition type
+		- UEFI: no such embedding for the second stage: for grub2-efi is just and efi app file
 3. UEFI via GPT:
 	ESP will be create for the efi app file (512M will be ok)
 4. UEFI via MBR:
@@ -53,14 +53,16 @@
 6. some EFI firmware will directly fall back to BIOS when detect MBR partition scheme is used, to prevent uefi booting from ESP on MBR disk. This scheme is called UEFI-MBR
 
 ## Secure boot
-[secureBootKeyChain](https://www.suse.com/communities/conversations/wp-content/uploads/2012/08/mok2.png)
+[secureBootKeyChain](https://www.suse.com/communities/conversations/wp-content/uploads/2012/08/mok2.png)    
+[details secureB of suse](https://www.suse.com/communities/conversations/uefi-secure-boot-details/)
+
 1. from uefi v2.2: just os loaders or drivers that has been signed via the acceptable digital signature could be loaded
 2. enable secure boot: system will drop to 'setup' mode, ask for the pk to be writen, after this, enter the 'user' mode. then only the driver or the os loader that has been signed with the pk could be loaded.
 3. KEK can be add to DB to allow other certificates to be used.
 4. and there is 'custom' mode, could let user add additional pk in
 
 5. Intel-based systems certified for Windows 8 must allow secure boot to enter custom mode or be disabled, but not on systems using the ARM architecture
-6. minimal bootloader: shim is used to be signed with win PK, and 
+6. minimal bootloader: shim is used to be signed with win PK, and then ...
 
 ## UEFI shell
 1. launching method: some firmware vendor make it available as efi app under the ESP, like /ESP/SHELLX64.efi

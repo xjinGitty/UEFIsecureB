@@ -1,5 +1,6 @@
 ## SLED12 feature sets that I have ever did some investigation
 
+---
 ### feature list:
 *(features that I worked together with Ben)*
 * KMS: concept, feature implementation, testing process 
@@ -23,6 +24,7 @@
 *(yifan)* 
 * dracut instead the mkinitrd and the initramfs (initrd)
 
+---
 ### details for specific features:
 
 #### on-line migration between SP
