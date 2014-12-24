@@ -71,3 +71,6 @@
 3. and some other deploy the combination keys to launch the shell
 4. otherwise must compile it manually and then add (bcfg)
 
+### DualBoot Scenraios that we test
+[WindowsSledDual-boot](https://twiki.innerweb.novell.com/bin/view/Main/WindowsSledDual-boot)
+
