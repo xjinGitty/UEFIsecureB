@@ -54,7 +54,7 @@
 6. some EFI firmware will directly fall back to BIOS when detect MBR partition scheme is used, to prevent uefi booting from ESP on MBR disk. This scheme is called UEFI-MBR
 
 ## Secure boot
-[secureBootKeyChain](https://www.suse.com/communities/conversations/wp-content/uploads/2012/08/mok2.png)    
+![secureBootKeyChain](https://www.suse.com/communities/conversations/wp-content/uploads/2012/08/mok2.png)    
 [details secureB of suse](https://www.suse.com/communities/conversations/uefi-secure-boot-details/)
 
 1. from uefi v2.2: just os loaders or drivers that has been signed via the acceptable digital signature could be loaded
